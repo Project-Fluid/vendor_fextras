@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
     vendor/fextras/etc/privapp-permissions-elgoog.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-elgoog.xml
 #    vendor/fextras/etc/googlesysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/elgoog.xml
 
+# Blur
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1
+
 # Inherit from fonts config
 $(call inherit-product, vendor/fextras/config/fonts.mk)
 
